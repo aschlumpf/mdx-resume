@@ -31,6 +31,10 @@ const theme = createMuiTheme({
     subtitle1: {
       fontSize: '1.2rem',
     },
+    subtitle2: {
+      color: '#3399FF',
+      textDecoration: 'underline',
+    },
   },
 });
 
