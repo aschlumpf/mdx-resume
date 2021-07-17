@@ -119,3 +119,8 @@
     flex-direction: column;
   }
 }
+
+.container {
+  height: 11in;
+  width: 8in;
+}
