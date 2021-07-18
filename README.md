@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overview
 
-## Getting Started
+This project was created so that I could build my resume in React.js with the MaterialUI framework. The application is built on Next.js with static generation, but it is not meant to be hosted on the Web at this time.
 
-First, run the development server:
+# Print the resume
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Run `npm i`
+2. Run `npm run build`
+3. Run `npm start`
+4. Navigate to `http://localhost:3000` on your browser to see the application.
+5. Simply print the page on the browser in order to get a PDF/print-out of the resume. When in print mode,
+   the page will trim the edges of the DOM and present an A4 sized resume. Make sure to enable graphics in order to get all
+   of the resume's graphics and colors.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Future Work
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+I have some ideas for how to improve this project, and possibly make it available to the community to create their own resumes in MaterialUI. Tasks are categorized into "Easy", "Medium", and "Hard," difficulties, based on their individual technical complexities, amount of unknowns associated with the task, and how tedious/time-consuming the task is.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Componentize the resume sections. (Easy)
+- Automate the export to PDF process. (Easy)
+- Tokenize all strings so that they can more easily be updated, possibly with a CMS. (Medium)
+- Properly components in MDX so that resumes can be created painlessly in Markdown with JSX. (Hard)
+- Make a resume editor where the resume's theme, components, and structure, can be customized on a UI. (Hard)
+- Allow an easy way to check how the resume parses against common/open-source resume parsers. (Hard)

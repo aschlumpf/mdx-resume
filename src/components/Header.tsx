@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) =>
     },
     header: {
       padding: theme.spacing(1),
-      boxShadow: '0 6px 10px rgba(0,0,0,.14),0 1px 18px rgba(0,0,0,.12),0 3px 5px rgba(0,0,0,.2)',
+      borderBottom: '1px solid gray',
+      // boxShadow: '0 6px 10px rgba(0,0,0,.14),0 1px 18px rgba(0,0,0,.12),0 3px 5px rgba(0,0,0,.2)',
     },
     bullet: {
       fontSize: '2rem',
