@@ -1,6 +1,6 @@
 # Overview
 
-This project was created so that I could build my resume in React.js with the MaterialUI framework. The application is built on Next.js with static generation, but it is not meant to be hosted on the Web at this time.
+This project was created so that I could build my resume in React.js with the MaterialUI framework. The application is built on Next.js with static generation and TypeScript, but it is not meant to be hosted on the Web at this time.
 
 # Print the resume
 
