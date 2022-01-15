@@ -5,7 +5,7 @@ import { red } from '@material-ui/core/colors';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#3399FF',
+      main: 'rgb(54, 156, 135)',
     },
     secondary: {
       main: '#19857b',
@@ -17,26 +17,26 @@ const theme = createMuiTheme({
       default: '#fff',
     },
     text: {
-      secondary: '#3399FF',
+      secondary: 'rgb(54, 156, 135)',
     },
   },
   typography: {
     h1: {
-      color: '#3399FF',
+      color: 'rgb(54, 156, 135)',
       fontSize: '2rem',
       fontWeight: 500,
       lineHeight: 1.167,
       letterSpacing: '0em',
     },
     h3: {
-      color: '#3399FF',
+      color: 'rgb(54, 156, 135)',
       fontSize: '1.7rem',
       fontWeight: 500,
       lineHeight: 1.167,
       letterSpacing: '0em',
     },
     h4: {
-      fontSize: '1rem',
+      fontSize: '1.2rem',
       fontWeight: 500,
       lineHeight: 1.167,
       letterSpacing: '0em',
@@ -50,12 +50,21 @@ const theme = createMuiTheme({
       // textDecoration: 'underline',
       fontSize: '0.875rem',
       letterSpacing: '0.01071em',
-      // color: '#3399FF',
+      // color: 'rgb(54, 156, 135)',
     },
     body1: {
-      fontSize: '0.8rem',
+      fontSize: '1rem',
     },
   },
+  overrides: {
+    MuiTimelineItem: {
+      missingOppositeContent: {
+        '&:before': {
+          flex: 0.03,
+        },
+      },
+    },
+  } as any,
 });
 
 export default theme;

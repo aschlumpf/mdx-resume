@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) =>
       display: 'block',
       margin: 'auto',
       border: '1px solid black',
+      // size: 'A4',
       height: '11.75in',
       width: '8.25in',
     },
@@ -32,7 +33,8 @@ const useStyles = makeStyles((theme) =>
       flex: 0.4,
     },
     timelineDate: {
-      fontWeight: 500,
+      fontStyle: 'italic',
+      fontSize: '1rem',
     },
     experienceDetails: {
       paddingTop: theme.spacing(1),
@@ -58,16 +60,14 @@ const useStyles = makeStyles((theme) =>
     chipContainer: {
       display: 'flex',
       width: '100%',
+      justifyContent: 'flex-start',
       alignItems: 'center',
+      flexWrap: 'wrap',
+      columnGap: theme.spacing(1),
+      rowGap: theme.spacing(1),
       '& h4': {
         flex: '0.2',
       },
-    },
-    chipRow: {
-      display: 'flex',
-      justifyContent: 'flex-start',
-      flex: '0.8',
-      columnGap: theme.spacing(1),
       '& .MuiChip-root': {
         backgroundColor: theme.palette.primary.main,
         color: 'white',
@@ -88,112 +88,93 @@ const PaperContainer: React.FC = (props) => {
           <Box display="flex" justifyContent="flex-start">
             <Timeline className={classes.timeline}>
               <TimelineItem>
-                <TimelineOppositeContent className={classes.timelineOppositeContent}>
-                  <Typography className={classes.timelineDate} variant="h4" color="textSecondary">
-                    February 2021 - Present
-                  </Typography>
-                </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot color="primary" />
                   <TimelineConnector classes={{ root: classes.timelineConnector }} />
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Typography variant="h4">Software Engineer | iCIMS</Typography>
+                  <Typography variant="h4">Software Engineer, iCIMS</Typography>
+                  <Typography variant="subtitle2" className={classes.timelineDate}>
+                    Feb 2021 - Present
+                  </Typography>
                   <ul className={classes.experienceDetails}>
                     <li>
                       <Typography variant="body1">
-                        Migrated a vanilla Node.js Express server to a new stack with TypeScript, ES6 modules, and Jest.
+                        Serve as technical leader for a team working with an Angular2 frontend and Node.js backend.
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="body1">
-                        Mentoring Associated Software Engineers and interns by offering help with challenging tickets,
-                        leading code reviews, and offering advice on best practices.
+                        Architected and implemented drag and drop form builder that saved implementation consultants 10+
+                        hours of non-billable time per implementation.
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="body1">
-                        Aligned my team's application with the company authentication standards, reworking the
-                        application login flow to support OAuth, SAML, and legacy authentication methods.
+                        Implemented an Auth0 integration with other products across the business to help streamline
+                        cross-product authentication and win strategic business accounts.
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="body1">
-                        Re-architecting core features of the application and implementing new solutions to support a
-                        rapidly growing customer base.
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography variant="body1">
-                        Represent my team on customer and technical support escalations in order to ensure our team
-                        meets contractual obligations.
+                        Mentor interns and junior engineers, teaching best practices, explaining key concepts, and
+                        reviewing PRs.
                       </Typography>
                     </li>
                   </ul>
                 </TimelineContent>
               </TimelineItem>
               <TimelineItem>
-                <TimelineOppositeContent className={classes.timelineOppositeContent}>
-                  <Typography className={classes.timelineDate} variant="h4" color="textSecondary">
-                    June 2020
-                  </Typography>
-                </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot color="primary" />
                   <TimelineConnector classes={{ root: classes.timelineConnector }} />
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Typography variant="h4">Associate Software Engineer | iCIMS</Typography>
+                  <Typography variant="h4">Associate Software Engineer, iCIMS</Typography>
+                  <Typography variant="subtitle2" className={classes.timelineDate}>
+                    Jun 2020 - Feb 2021
+                  </Typography>
                   <ul className={classes.experienceDetails}>
                     <li>
                       <Typography variant="body1">
-                        Responsible for developing features for an Angular application built with Material, completing
-                        work to full definition-of-done with accessibility, unit testing, type safety, and performance,
-                        in mind.
+                        Integrated I18Next framework for localizing our Angular application that was previously
+                        English-only, helping to create a global sales pipeline for our product.
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="body1">
-                        Designed and implemented an architecture for adopting localization in the application, which was
-                        previously hard-coded in English.
+                        Worked alongside Senior Product Manager to implement custom solutions for enterprise customers
+                        in order to meet $500k+ contractual obligations.
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="body1">
-                        Developed custom solutions for large customers of the application, working alongside a technical
-                        project manager.
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography variant="body1">
-                        Implemented a unit testing standard for the application, built on Karma with Jasmine.
+                        Promoted out of Associate role in a little over 6 months for exceeding performance expectations.
                       </Typography>
                     </li>
                   </ul>
                 </TimelineContent>
               </TimelineItem>
               <TimelineItem>
-                <TimelineOppositeContent className={classes.timelineOppositeContent}>
-                  <Typography className={classes.timelineDate} variant="h4" color="textSecondary">
-                    June 2019
-                  </Typography>
-                </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot color="primary" />
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Typography variant="h4">Software Engineer Intern | iCIMS</Typography>
+                  <Typography variant="h4">Software Engineer Intern, iCIMS</Typography>
+                  <Typography variant="subtitle2" className={classes.timelineDate}>
+                    Jun 2019 - Jun 2020
+                  </Typography>
                   <ul className={classes.experienceDetails}>
                     <li>
                       <Typography variant="body1">
-                        Worked through my final year in college as a part-time contributor to a production Angular
-                        application used by over 300 customers.
+                        Increased unit test coverage from 0% to 40% in 6 months by architecting use of Karma and Jasmine
+                        in the Angular application.
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="body1">
-                        Designed and implemented a SPA form builder based on a custom JSON schema for a production
-                        product, written in React with Redux.
+                        Integrated a newly acquired product with iCIMS design system standards promoting cross-selling
+                        of over 5 enterprise customers.
                       </Typography>
                     </li>
                   </ul>
@@ -207,50 +188,38 @@ const PaperContainer: React.FC = (props) => {
           <Box className={classes.education}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
               <Typography variant="h4">Stevens Institute of Technology</Typography>
-              <Typography variant="h4">Bachelor's of Science with High Honor</Typography>
+              <Typography variant="h4">Bachelor's of Science: Computer Science</Typography>
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center">
               <Typography variant="subtitle2">Hoboken, NJ</Typography>
-              <Typography variant="subtitle2">Computer Science</Typography>
+              <Typography variant="subtitle2">3.98 GPA</Typography>
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center">
-              <Typography variant="subtitle2">August 2016 - May 2020</Typography>
-              <Typography variant="subtitle2">3.98 GPA</Typography>
+              <Typography variant="subtitle2">May 2020</Typography>
+              <Typography variant="subtitle2">Degree with High Honor</Typography>
             </Box>
           </Box>
         </Box>
         <Box>
-          <Typography variant="h3">Skills</Typography>
+          <Typography variant="h3">Technical Skills</Typography>
           <Box className={classes.skills}>
             <Box className={classes.chipContainer}>
-              <Typography variant="h4">Languages</Typography>
-              <Box className={classes.chipRow}>
-                <Chip label="TypeScript" />
-                <Chip label="Modern JS" />
-                <Chip label="Node.js" />
-                <Chip label="Java" />
-              </Box>
-            </Box>
-            <Box className={classes.chipContainer}>
-              <Typography variant="h4">Frameworks</Typography>
-              <Box className={classes.chipRow}>
-                <Chip label="Angular" />
-                <Chip label="React.js" />
-                <Chip label="Material Design" />
-                <Chip label="RxJS" />
-
-                <Chip label="Jest" />
-                <Chip label="Jasmine" />
-              </Box>
-            </Box>
-            <Box className={classes.chipContainer}>
-              <Typography variant="h4">Patterns</Typography>
-              <Box className={classes.chipRow}>
-                <Chip label="Functional Programming" />
-                <Chip label="Accessibility" />
-                <Chip label="Localization" />
-                <Chip label="Web Performance" />
-              </Box>
+              <Chip label="TypeScript" />
+              <Chip label="ES2015+ JavaScript" />
+              <Chip label="Angular" />
+              <Chip label="ReactJS" />
+              <Chip label="Node.js" />
+              <Chip label="Java" />
+              <Chip label="Express" />
+              <Chip label="RxJS" />
+              <Chip label="SASS / CSS" />
+              <Chip label="Jest / Mocha" />
+              <Chip label="Storybook" />
+              <Chip label="Material" />
+              <Chip label="WebSocket" />
+              <Chip label="NextJS" />
+              <Chip label="OAuth" />
+              <Chip label="NoSQL" />
             </Box>
           </Box>
         </Box>

@@ -16,9 +16,9 @@ This project was created so that I could build my resume in React.js with the Ma
 
 I have some ideas for how to improve this project, and possibly make it available to the community to create their own resumes in MaterialUI. Tasks are categorized into "Easy", "Medium", and "Hard," difficulties, based on their individual technical complexities, amount of unknowns associated with the task, and how tedious/time-consuming the task is.
 
-- Componentize the resume sections. (Easy)
-- Automate the export to PDF process. (Easy)
-- Tokenize all strings so that they can more easily be updated, possibly with a CMS. (Medium)
-- Properly components in MDX so that resumes can be created painlessly in Markdown with JSX. (Hard)
-- Make a resume editor where the resume's theme, components, and structure, can be customized on a UI. (Hard)
-- Allow an easy way to check how the resume parses against common/open-source resume parsers. (Hard)
+- Componentize the resume sections.
+- Automate the export to PDF process.
+- Tokenize all strings so that they can more easily be updated, possibly with a CMS.
+- Properly components in MDX so that resumes can be created painlessly in Markdown with JSX.
+- Make a resume editor where the resume's theme, components, and structure, can be customized on a UI.
+- Allow an easy way to check how the resume parses against common/open-source resume parsers.
